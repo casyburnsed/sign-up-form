@@ -11,21 +11,22 @@
 <body>
     <div class="container-flex">
         <div class="left-panel">
-            <img src="/sign-up-form/images/thisisengineering-sbVu5zitZt0-unsplash.jpg" alt="EdTech Conference Graphic">
+            <img src="./images/hand.jpg" alt="EdTech Conference Graphic">
+            <div class="overlay-text">EdTech Conference 2025</div>"
         </div>
 
         <div class="right-panel">
             <h1>Welcome to the EdTech Conference 2025!</h1>
             <h2>Please register for the Conference below:</h2>
         
-            <form action="/register" method="post">
+            <form class="form-box" action="/register" method="post">
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="first_name" class="form-label">First Name:</label>
+                        <label for="first_name" class="form-label"><strong>FIRST NAME:</strong></label>
                         <input type="text" id="first_name" name="first_name" class="form-control" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="last_name" class="form-label">Last Name:</label>
+                        <label for="last_name" class="form-label"><strong>LAST NAME:</strong></label>
                         <input type="text" id="last_name" name="last_name" class="form-control" required>
                     </div>
                 </div>
@@ -33,22 +34,22 @@
                 
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="user_email">Email:</label>
+                        <label for="user_email"><strong>EMAIL:</strong></label>
                         <input type="email" id="user_email" name="email" placeholder="Ex: you@example.com" class="form-control" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="phone_number">Phone Number:</label>
+                        <label for="phone_number"><strong>PHONE NUMBER:</strong></label>
                         <input type="tel" id="phone_number" name="phone_number" placeholder="Ex: (123) 456-7890" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="school_organization">School or Organization:</label>
+                        <label for="school_organization"><strong>SCHOOL OR ORGANIZATION:</strong></label>
                         <input type="text" id="school_organization" name="school_organization" placeholder="Ex: Washington High School" class="form-control" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="Role" class="form-label">Role:</label>
+                        <label for="Role" class="form-label"><strong>ROLE:</strong></label>
                         <select name="Role" id="Role" class="form-select" required>
                             <option value="">-- Choose a role --</option>
                             <option value="teacher">Teacher</option>
@@ -64,16 +65,25 @@
 
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
-                        <label for="user_password">Password:</label>
-                        <input type="password" id="user_password" name="password" class="form-control" required>
+                        <label for="user_password"><strong>PASSWORD:</strong></label>
+                        <input 
+                            type="password" 
+                            id="user_password" 
+                            name="password" 
+                            class="form-control" 
+                            required
+                            pattern="^(?=.*[!@#$%^&*])(?=.{8,})"
+                            placeholder="At least 8 characters, 1 special character">
+
                     </div>
                     <div class="col-md-6">
-                        <label for="confirm_password">Confirm Password:</label>
+                        <label for="confirm_password"><strong>CONFIRM PASSWORD:</strong></label>
                         <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary custom-btn w-50">Register</button>
             </form>
     </div>
+<script src="./script.js"></script>
 </body>
 </html>
